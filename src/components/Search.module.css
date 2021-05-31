@@ -57,6 +57,10 @@
   background-color: #eee;
 }
 
+.selected {
+  background-color: #eee;
+}
+
 .result > span {
   white-space: nowrap;
   overflow: hidden;
