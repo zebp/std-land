@@ -1,0 +1,1372 @@
+[
+  {
+    "name": "assert.ts",
+    "extension": "ts",
+    "path": "_util/assert.ts"
+  },
+  {
+    "name": "deep_assign.ts",
+    "extension": "ts",
+    "path": "_util/deep_assign.ts"
+  },
+  {
+    "name": "has_own_property.ts",
+    "extension": "ts",
+    "path": "_util/has_own_property.ts"
+  },
+  {
+    "name": "os.ts",
+    "extension": "ts",
+    "path": "_util/os.ts"
+  },
+  {
+    "name": "tar.ts",
+    "extension": "ts",
+    "path": "archive/tar.ts"
+  },
+  {
+    "name": "deferred.ts",
+    "extension": "ts",
+    "path": "async/deferred.ts"
+  },
+  {
+    "name": "delay.ts",
+    "extension": "ts",
+    "path": "async/delay.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "async/mod.ts"
+  },
+  {
+    "name": "mux_async_iterator.ts",
+    "extension": "ts",
+    "path": "async/mux_async_iterator.ts"
+  },
+  {
+    "name": "pool.ts",
+    "extension": "ts",
+    "path": "async/pool.ts"
+  },
+  {
+    "name": "tee.ts",
+    "extension": "ts",
+    "path": "async/tee.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "async/test.ts"
+  },
+  {
+    "name": "bytes_list.ts",
+    "extension": "ts",
+    "path": "bytes/bytes_list.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "bytes/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "bytes/test.ts"
+  },
+  {
+    "name": "formatter.ts",
+    "extension": "ts",
+    "path": "datetime/formatter.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "datetime/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "datetime/test.ts"
+  },
+  {
+    "name": "tokenizer.ts",
+    "extension": "ts",
+    "path": "datetime/tokenizer.ts"
+  },
+  {
+    "name": "dumper.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/dumper/dumper.ts"
+  },
+  {
+    "name": "dumper_state.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/dumper/dumper_state.ts"
+  },
+  {
+    "name": "error.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/error.ts"
+  },
+  {
+    "name": "loader.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/loader/loader.ts"
+  },
+  {
+    "name": "loader_state.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/loader/loader_state.ts"
+  },
+  {
+    "name": "mark.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/mark.ts"
+  },
+  {
+    "name": "parse.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/parse.ts"
+  },
+  {
+    "name": "schema.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema.ts"
+  },
+  {
+    "name": "core.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema/core.ts"
+  },
+  {
+    "name": "default.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema/default.ts"
+  },
+  {
+    "name": "extended.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema/extended.ts"
+  },
+  {
+    "name": "failsafe.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema/failsafe.ts"
+  },
+  {
+    "name": "json.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema/json.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/schema/mod.ts"
+  },
+  {
+    "name": "state.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/state.ts"
+  },
+  {
+    "name": "stringify.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/stringify.ts"
+  },
+  {
+    "name": "type.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type.ts"
+  },
+  {
+    "name": "binary.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/binary.ts"
+  },
+  {
+    "name": "bool.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/bool.ts"
+  },
+  {
+    "name": "float.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/float.ts"
+  },
+  {
+    "name": "function.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/function.ts"
+  },
+  {
+    "name": "int.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/int.ts"
+  },
+  {
+    "name": "map.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/map.ts"
+  },
+  {
+    "name": "merge.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/merge.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/mod.ts"
+  },
+  {
+    "name": "nil.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/nil.ts"
+  },
+  {
+    "name": "omap.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/omap.ts"
+  },
+  {
+    "name": "pairs.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/pairs.ts"
+  },
+  {
+    "name": "regexp.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/regexp.ts"
+  },
+  {
+    "name": "seq.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/seq.ts"
+  },
+  {
+    "name": "set.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/set.ts"
+  },
+  {
+    "name": "str.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/str.ts"
+  },
+  {
+    "name": "timestamp.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/timestamp.ts"
+  },
+  {
+    "name": "undefined.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/type/undefined.ts"
+  },
+  {
+    "name": "utils.ts",
+    "extension": "ts",
+    "path": "encoding/_yaml/utils.ts"
+  },
+  {
+    "name": "ascii85.ts",
+    "extension": "ts",
+    "path": "encoding/ascii85.ts"
+  },
+  {
+    "name": "base32.ts",
+    "extension": "ts",
+    "path": "encoding/base32.ts"
+  },
+  {
+    "name": "base64.ts",
+    "extension": "ts",
+    "path": "encoding/base64.ts"
+  },
+  {
+    "name": "base64url.ts",
+    "extension": "ts",
+    "path": "encoding/base64url.ts"
+  },
+  {
+    "name": "binary.ts",
+    "extension": "ts",
+    "path": "encoding/binary.ts"
+  },
+  {
+    "name": "csv.ts",
+    "extension": "ts",
+    "path": "encoding/csv.ts"
+  },
+  {
+    "name": "csv_stringify.ts",
+    "extension": "ts",
+    "path": "encoding/csv_stringify.ts"
+  },
+  {
+    "name": "hex.ts",
+    "extension": "ts",
+    "path": "encoding/hex.ts"
+  },
+  {
+    "name": "toml.ts",
+    "extension": "ts",
+    "path": "encoding/toml.ts"
+  },
+  {
+    "name": "yaml.ts",
+    "extension": "ts",
+    "path": "encoding/yaml.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "flags/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "flags/test.ts"
+  },
+  {
+    "name": "colors.ts",
+    "extension": "ts",
+    "path": "fmt/colors.ts"
+  },
+  {
+    "name": "printf.ts",
+    "extension": "ts",
+    "path": "fmt/printf.ts"
+  },
+  {
+    "name": "_util.ts",
+    "extension": "ts",
+    "path": "fs/_util.ts"
+  },
+  {
+    "name": "copy.ts",
+    "extension": "ts",
+    "path": "fs/copy.ts"
+  },
+  {
+    "name": "empty_dir.ts",
+    "extension": "ts",
+    "path": "fs/empty_dir.ts"
+  },
+  {
+    "name": "ensure_dir.ts",
+    "extension": "ts",
+    "path": "fs/ensure_dir.ts"
+  },
+  {
+    "name": "ensure_file.ts",
+    "extension": "ts",
+    "path": "fs/ensure_file.ts"
+  },
+  {
+    "name": "ensure_link.ts",
+    "extension": "ts",
+    "path": "fs/ensure_link.ts"
+  },
+  {
+    "name": "ensure_symlink.ts",
+    "extension": "ts",
+    "path": "fs/ensure_symlink.ts"
+  },
+  {
+    "name": "eol.ts",
+    "extension": "ts",
+    "path": "fs/eol.ts"
+  },
+  {
+    "name": "exists.ts",
+    "extension": "ts",
+    "path": "fs/exists.ts"
+  },
+  {
+    "name": "expand_glob.ts",
+    "extension": "ts",
+    "path": "fs/expand_glob.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "fs/mod.ts"
+  },
+  {
+    "name": "move.ts",
+    "extension": "ts",
+    "path": "fs/move.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "fs/test.ts"
+  },
+  {
+    "name": "walk.ts",
+    "extension": "ts",
+    "path": "fs/walk.ts"
+  },
+  {
+    "name": "fnv32.ts",
+    "extension": "ts",
+    "path": "hash/_fnv/fnv32.ts"
+  },
+  {
+    "name": "fnv64.ts",
+    "extension": "ts",
+    "path": "hash/_fnv/fnv64.ts"
+  },
+  {
+    "name": "util.ts",
+    "extension": "ts",
+    "path": "hash/_fnv/util.ts"
+  },
+  {
+    "name": "keccak.ts",
+    "extension": "ts",
+    "path": "hash/_sha3/keccak.ts"
+  },
+  {
+    "name": "keccakf.ts",
+    "extension": "ts",
+    "path": "hash/_sha3/keccakf.ts"
+  },
+  {
+    "name": "sha3.ts",
+    "extension": "ts",
+    "path": "hash/_sha3/sha3.ts"
+  },
+  {
+    "name": "shake.ts",
+    "extension": "ts",
+    "path": "hash/_sha3/shake.ts"
+  },
+  {
+    "name": "sponge.ts",
+    "extension": "ts",
+    "path": "hash/_sha3/sponge.ts"
+  },
+  {
+    "name": "build.ts",
+    "extension": "ts",
+    "path": "hash/_wasm/build.ts"
+  },
+  {
+    "name": "hash.ts",
+    "extension": "ts",
+    "path": "hash/_wasm/hash.ts"
+  },
+  {
+    "name": "wasm.js",
+    "extension": "js",
+    "path": "hash/_wasm/wasm.js"
+  },
+  {
+    "name": "fnv.ts",
+    "extension": "ts",
+    "path": "hash/fnv.ts"
+  },
+  {
+    "name": "hasher.ts",
+    "extension": "ts",
+    "path": "hash/hasher.ts"
+  },
+  {
+    "name": "md5.ts",
+    "extension": "ts",
+    "path": "hash/md5.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "hash/mod.ts"
+  },
+  {
+    "name": "sha1.ts",
+    "extension": "ts",
+    "path": "hash/sha1.ts"
+  },
+  {
+    "name": "sha256.ts",
+    "extension": "ts",
+    "path": "hash/sha256.ts"
+  },
+  {
+    "name": "sha3.ts",
+    "extension": "ts",
+    "path": "hash/sha3.ts"
+  },
+  {
+    "name": "sha512.ts",
+    "extension": "ts",
+    "path": "hash/sha512.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "hash/test.ts"
+  },
+  {
+    "name": "_io.ts",
+    "extension": "ts",
+    "path": "http/_io.ts"
+  },
+  {
+    "name": "_mock_conn.ts",
+    "extension": "ts",
+    "path": "http/_mock_conn.ts"
+  },
+  {
+    "name": "bench.ts",
+    "extension": "ts",
+    "path": "http/bench.ts"
+  },
+  {
+    "name": "cookie.ts",
+    "extension": "ts",
+    "path": "http/cookie.ts"
+  },
+  {
+    "name": "file_server.ts",
+    "extension": "ts",
+    "path": "http/file_server.ts"
+  },
+  {
+    "name": "http_status.ts",
+    "extension": "ts",
+    "path": "http/http_status.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "http/mod.ts"
+  },
+  {
+    "name": "racing_server.ts",
+    "extension": "ts",
+    "path": "http/racing_server.ts"
+  },
+  {
+    "name": "server.ts",
+    "extension": "ts",
+    "path": "http/server.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "http/test.ts"
+  },
+  {
+    "name": "_iotest.ts",
+    "extension": "ts",
+    "path": "io/_iotest.ts"
+  },
+  {
+    "name": "buffer.ts",
+    "extension": "ts",
+    "path": "io/buffer.ts"
+  },
+  {
+    "name": "bufio.ts",
+    "extension": "ts",
+    "path": "io/bufio.ts"
+  },
+  {
+    "name": "ioutil.ts",
+    "extension": "ts",
+    "path": "io/ioutil.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "io/mod.ts"
+  },
+  {
+    "name": "readers.ts",
+    "extension": "ts",
+    "path": "io/readers.ts"
+  },
+  {
+    "name": "streams.ts",
+    "extension": "ts",
+    "path": "io/streams.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "io/test.ts"
+  },
+  {
+    "name": "types.d.ts",
+    "extension": "ts",
+    "path": "io/types.d.ts"
+  },
+  {
+    "name": "util.ts",
+    "extension": "ts",
+    "path": "io/util.ts"
+  },
+  {
+    "name": "writers.ts",
+    "extension": "ts",
+    "path": "io/writers.ts"
+  },
+  {
+    "name": "handlers.ts",
+    "extension": "ts",
+    "path": "log/handlers.ts"
+  },
+  {
+    "name": "levels.ts",
+    "extension": "ts",
+    "path": "log/levels.ts"
+  },
+  {
+    "name": "logger.ts",
+    "extension": "ts",
+    "path": "log/logger.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "log/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "log/test.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "mime/mod.ts"
+  },
+  {
+    "name": "multipart.ts",
+    "extension": "ts",
+    "path": "mime/multipart.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "mime/test.ts"
+  },
+  {
+    "name": "constants.ts",
+    "extension": "ts",
+    "path": "node/_crypto/constants.ts"
+  },
+  {
+    "name": "pbkdf2.ts",
+    "extension": "ts",
+    "path": "node/_crypto/pbkdf2.ts"
+  },
+  {
+    "name": "randomBytes.ts",
+    "extension": "ts",
+    "path": "node/_crypto/randomBytes.ts"
+  },
+  {
+    "name": "types.ts",
+    "extension": "ts",
+    "path": "node/_crypto/types.ts"
+  },
+  {
+    "name": "_errors.ts",
+    "extension": "ts",
+    "path": "node/_errors.ts"
+  },
+  {
+    "name": "_fs_access.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_access.ts"
+  },
+  {
+    "name": "_fs_appendFile.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_appendFile.ts"
+  },
+  {
+    "name": "_fs_chmod.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_chmod.ts"
+  },
+  {
+    "name": "_fs_chown.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_chown.ts"
+  },
+  {
+    "name": "_fs_close.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_close.ts"
+  },
+  {
+    "name": "_fs_common.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_common.ts"
+  },
+  {
+    "name": "_fs_constants.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_constants.ts"
+  },
+  {
+    "name": "_fs_copy.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_copy.ts"
+  },
+  {
+    "name": "_fs_dir.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_dir.ts"
+  },
+  {
+    "name": "_fs_dirent.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_dirent.ts"
+  },
+  {
+    "name": "_fs_exists.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_exists.ts"
+  },
+  {
+    "name": "_fs_fdatasync.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_fdatasync.ts"
+  },
+  {
+    "name": "_fs_fstat.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_fstat.ts"
+  },
+  {
+    "name": "_fs_fsync.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_fsync.ts"
+  },
+  {
+    "name": "_fs_ftruncate.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_ftruncate.ts"
+  },
+  {
+    "name": "_fs_futimes.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_futimes.ts"
+  },
+  {
+    "name": "_fs_link.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_link.ts"
+  },
+  {
+    "name": "_fs_lstat.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_lstat.ts"
+  },
+  {
+    "name": "_fs_mkdir.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_mkdir.ts"
+  },
+  {
+    "name": "_fs_mkdtemp.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_mkdtemp.ts"
+  },
+  {
+    "name": "_fs_open.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_open.ts"
+  },
+  {
+    "name": "_fs_readFile.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_readFile.ts"
+  },
+  {
+    "name": "_fs_readdir.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_readdir.ts"
+  },
+  {
+    "name": "_fs_readlink.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_readlink.ts"
+  },
+  {
+    "name": "_fs_realpath.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_realpath.ts"
+  },
+  {
+    "name": "_fs_rename.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_rename.ts"
+  },
+  {
+    "name": "_fs_rmdir.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_rmdir.ts"
+  },
+  {
+    "name": "_fs_stat.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_stat.ts"
+  },
+  {
+    "name": "_fs_symlink.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_symlink.ts"
+  },
+  {
+    "name": "_fs_truncate.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_truncate.ts"
+  },
+  {
+    "name": "_fs_unlink.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_unlink.ts"
+  },
+  {
+    "name": "_fs_utimes.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_utimes.ts"
+  },
+  {
+    "name": "_fs_watch.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_watch.ts"
+  },
+  {
+    "name": "_fs_writeFile.ts",
+    "extension": "ts",
+    "path": "node/_fs/_fs_writeFile.ts"
+  },
+  {
+    "name": "_fs_readFile.ts",
+    "extension": "ts",
+    "path": "node/_fs/promises/_fs_readFile.ts"
+  },
+  {
+    "name": "_fs_writeFile.ts",
+    "extension": "ts",
+    "path": "node/_fs/promises/_fs_writeFile.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "node/_fs/promises/mod.ts"
+  },
+  {
+    "name": "cjs_a.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_a.js"
+  },
+  {
+    "name": "cjs_b.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_b.js"
+  },
+  {
+    "name": "cjs_builtin.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_builtin.js"
+  },
+  {
+    "name": "cjs_conditional_exports.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_conditional_exports.js"
+  },
+  {
+    "name": "cjs_cycle_a.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_cycle_a.js"
+  },
+  {
+    "name": "cjs_cycle_b.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_cycle_b.js"
+  },
+  {
+    "name": "cjs_throw.js",
+    "extension": "js",
+    "path": "node/_module/cjs/cjs_throw.js"
+  },
+  {
+    "name": "index.js",
+    "extension": "js",
+    "path": "node/_module/cjs/index.js"
+  },
+  {
+    "name": "cjs_c.js",
+    "extension": "js",
+    "path": "node/_module/cjs/subdir/cjs_c.js"
+  },
+  {
+    "name": "index.js",
+    "extension": "js",
+    "path": "node/_module/cjs/subdir/dir/index.js"
+  },
+  {
+    "name": "index.js",
+    "extension": "js",
+    "path": "node/_module/node_modules/colorette/index.js"
+  },
+  {
+    "name": "index.js",
+    "extension": "js",
+    "path": "node/_module/node_modules/left-pad/index.js"
+  },
+  {
+    "name": "async_iterator.ts",
+    "extension": "ts",
+    "path": "node/_stream/async_iterator.ts"
+  },
+  {
+    "name": "buffer_list.ts",
+    "extension": "ts",
+    "path": "node/_stream/buffer_list.ts"
+  },
+  {
+    "name": "destroy.ts",
+    "extension": "ts",
+    "path": "node/_stream/destroy.ts"
+  },
+  {
+    "name": "duplex.ts",
+    "extension": "ts",
+    "path": "node/_stream/duplex.ts"
+  },
+  {
+    "name": "duplex_internal.ts",
+    "extension": "ts",
+    "path": "node/_stream/duplex_internal.ts"
+  },
+  {
+    "name": "end_of_stream.ts",
+    "extension": "ts",
+    "path": "node/_stream/end_of_stream.ts"
+  },
+  {
+    "name": "from.ts",
+    "extension": "ts",
+    "path": "node/_stream/from.ts"
+  },
+  {
+    "name": "passthrough.ts",
+    "extension": "ts",
+    "path": "node/_stream/passthrough.ts"
+  },
+  {
+    "name": "pipeline.ts",
+    "extension": "ts",
+    "path": "node/_stream/pipeline.ts"
+  },
+  {
+    "name": "promises.ts",
+    "extension": "ts",
+    "path": "node/_stream/promises.ts"
+  },
+  {
+    "name": "readable.ts",
+    "extension": "ts",
+    "path": "node/_stream/readable.ts"
+  },
+  {
+    "name": "readable_internal.ts",
+    "extension": "ts",
+    "path": "node/_stream/readable_internal.ts"
+  },
+  {
+    "name": "stream.ts",
+    "extension": "ts",
+    "path": "node/_stream/stream.ts"
+  },
+  {
+    "name": "symbols.ts",
+    "extension": "ts",
+    "path": "node/_stream/symbols.ts"
+  },
+  {
+    "name": "transform.ts",
+    "extension": "ts",
+    "path": "node/_stream/transform.ts"
+  },
+  {
+    "name": "writable.ts",
+    "extension": "ts",
+    "path": "node/_stream/writable.ts"
+  },
+  {
+    "name": "writable_internal.ts",
+    "extension": "ts",
+    "path": "node/_stream/writable_internal.ts"
+  },
+  {
+    "name": "common.ts",
+    "extension": "ts",
+    "path": "node/_tools/common.ts"
+  },
+  {
+    "name": "require.ts",
+    "extension": "ts",
+    "path": "node/_tools/require.ts"
+  },
+  {
+    "name": "setup.ts",
+    "extension": "ts",
+    "path": "node/_tools/setup.ts"
+  },
+  {
+    "name": "index.js",
+    "extension": "js",
+    "path": "node/_tools/suites/common/index.js"
+  },
+  {
+    "name": "test-assert-async.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-assert-async.js"
+  },
+  {
+    "name": "test-assert-fail.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-assert-fail.js"
+  },
+  {
+    "name": "test-assert.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-assert.js"
+  },
+  {
+    "name": "test-event-emitter-invalid-listener.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-invalid-listener.js"
+  },
+  {
+    "name": "test-event-emitter-listener-count.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-listener-count.js"
+  },
+  {
+    "name": "test-event-emitter-listeners.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-listeners.js"
+  },
+  {
+    "name": "test-event-emitter-max-listeners-warning-for-null.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-max-listeners-warning-for-null.js"
+  },
+  {
+    "name": "test-event-emitter-max-listeners-warning-for-symbol.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-max-listeners-warning-for-symbol.js"
+  },
+  {
+    "name": "test-event-emitter-max-listeners-warning.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-max-listeners-warning.js"
+  },
+  {
+    "name": "test-event-emitter-max-listeners.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-max-listeners.js"
+  },
+  {
+    "name": "test-event-emitter-once.js",
+    "extension": "js",
+    "path": "node/_tools/suites/parallel/test-event-emitter-once.js"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "node/_tools/test.ts"
+  },
+  {
+    "name": "_util_callbackify.ts",
+    "extension": "ts",
+    "path": "node/_util/_util_callbackify.ts"
+  },
+  {
+    "name": "_util_promisify.ts",
+    "extension": "ts",
+    "path": "node/_util/_util_promisify.ts"
+  },
+  {
+    "name": "_util_types.ts",
+    "extension": "ts",
+    "path": "node/_util/_util_types.ts"
+  },
+  {
+    "name": "_utils.ts",
+    "extension": "ts",
+    "path": "node/_utils.ts"
+  },
+  {
+    "name": "assert.ts",
+    "extension": "ts",
+    "path": "node/assert.ts"
+  },
+  {
+    "name": "assertion_error.ts",
+    "extension": "ts",
+    "path": "node/assertion_error.ts"
+  },
+  {
+    "name": "buffer.ts",
+    "extension": "ts",
+    "path": "node/buffer.ts"
+  },
+  {
+    "name": "child_process.ts",
+    "extension": "ts",
+    "path": "node/child_process.ts"
+  },
+  {
+    "name": "cli.ts",
+    "extension": "ts",
+    "path": "node/cli.ts"
+  },
+  {
+    "name": "console.ts",
+    "extension": "ts",
+    "path": "node/console.ts"
+  },
+  {
+    "name": "constants.ts",
+    "extension": "ts",
+    "path": "node/constants.ts"
+  },
+  {
+    "name": "crypto.ts",
+    "extension": "ts",
+    "path": "node/crypto.ts"
+  },
+  {
+    "name": "events.ts",
+    "extension": "ts",
+    "path": "node/events.ts"
+  },
+  {
+    "name": "fs.ts",
+    "extension": "ts",
+    "path": "node/fs.ts"
+  },
+  {
+    "name": "global.d.ts",
+    "extension": "ts",
+    "path": "node/global.d.ts"
+  },
+  {
+    "name": "global.ts",
+    "extension": "ts",
+    "path": "node/global.ts"
+  },
+  {
+    "name": "module.ts",
+    "extension": "ts",
+    "path": "node/module.ts"
+  },
+  {
+    "name": "os.ts",
+    "extension": "ts",
+    "path": "node/os.ts"
+  },
+  {
+    "name": "path.ts",
+    "extension": "ts",
+    "path": "node/path.ts"
+  },
+  {
+    "name": "process.ts",
+    "extension": "ts",
+    "path": "node/process.ts"
+  },
+  {
+    "name": "querystring.ts",
+    "extension": "ts",
+    "path": "node/querystring.ts"
+  },
+  {
+    "name": "stream.ts",
+    "extension": "ts",
+    "path": "node/stream.ts"
+  },
+  {
+    "name": "string_decoder.ts",
+    "extension": "ts",
+    "path": "node/string_decoder.ts"
+  },
+  {
+    "name": "timers.ts",
+    "extension": "ts",
+    "path": "node/timers.ts"
+  },
+  {
+    "name": "tty.ts",
+    "extension": "ts",
+    "path": "node/tty.ts"
+  },
+  {
+    "name": "url.ts",
+    "extension": "ts",
+    "path": "node/url.ts"
+  },
+  {
+    "name": "util.ts",
+    "extension": "ts",
+    "path": "node/util.ts"
+  },
+  {
+    "name": "_constants.ts",
+    "extension": "ts",
+    "path": "path/_constants.ts"
+  },
+  {
+    "name": "_interface.ts",
+    "extension": "ts",
+    "path": "path/_interface.ts"
+  },
+  {
+    "name": "_util.ts",
+    "extension": "ts",
+    "path": "path/_util.ts"
+  },
+  {
+    "name": "common.ts",
+    "extension": "ts",
+    "path": "path/common.ts"
+  },
+  {
+    "name": "glob.ts",
+    "extension": "ts",
+    "path": "path/glob.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "path/mod.ts"
+  },
+  {
+    "name": "posix.ts",
+    "extension": "ts",
+    "path": "path/posix.ts"
+  },
+  {
+    "name": "separator.ts",
+    "extension": "ts",
+    "path": "path/separator.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "path/test.ts"
+  },
+  {
+    "name": "win32.ts",
+    "extension": "ts",
+    "path": "path/win32.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "permissions/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "permissions/test.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "signal/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "signal/test.ts"
+  },
+  {
+    "name": "_diff.ts",
+    "extension": "ts",
+    "path": "testing/_diff.ts"
+  },
+  {
+    "name": "asserts.ts",
+    "extension": "ts",
+    "path": "testing/asserts.ts"
+  },
+  {
+    "name": "bench.ts",
+    "extension": "ts",
+    "path": "testing/bench.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "textproto/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "textproto/test.ts"
+  },
+  {
+    "name": "_common.ts",
+    "extension": "ts",
+    "path": "uuid/_common.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "uuid/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "uuid/test.ts"
+  },
+  {
+    "name": "v1.ts",
+    "extension": "ts",
+    "path": "uuid/v1.ts"
+  },
+  {
+    "name": "v4.ts",
+    "extension": "ts",
+    "path": "uuid/v4.ts"
+  },
+  {
+    "name": "v5.ts",
+    "extension": "ts",
+    "path": "uuid/v5.ts"
+  },
+  {
+    "name": "version.ts",
+    "extension": "ts",
+    "path": "version.ts"
+  },
+  {
+    "name": "snapshot_preview1.ts",
+    "extension": "ts",
+    "path": "wasi/snapshot_preview1.ts"
+  },
+  {
+    "name": "mod.ts",
+    "extension": "ts",
+    "path": "ws/mod.ts"
+  },
+  {
+    "name": "test.ts",
+    "extension": "ts",
+    "path": "ws/test.ts"
+  }
+]
