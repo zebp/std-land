@@ -30,10 +30,23 @@ export async function getServerSideProps(
     .with(`string`, () => rawId as string)
     .otherwise(() => (rawId as string[]).join(`/`));
 
+  const results = fuse.search(id);
+  const firstResult = results[0];
+
+  // TODO: Make this threshold configurable.
+  if (firstResult?.score ?? 1 < 0.03) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: `https://deno.land/std/${firstResult.item.path}`,
+      },
+    };
+  }
+
   return {
     props: {
       query: id as string | null,
-      results: fuse.search(id),
+      results,
     },
   };
 }
