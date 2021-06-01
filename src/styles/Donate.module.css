@@ -1,0 +1,18 @@
+#container {
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  color: var(--text-color);
+}
+
+#inner {
+  width: 40rem;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.blue {
+  color: #4aa3b9;
+}
