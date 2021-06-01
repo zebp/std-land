@@ -1,7 +1,7 @@
 import React from 'react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 import { match } from 'ts-pattern';
-import { fuse, SearchResult } from '@/search';
+import { search, SearchResult } from '@/search';
 import Search from '@/components/Search';
 import PopulatedHead from '@/components/PopulatedHead';
 
@@ -35,6 +35,7 @@ export default function Lookup({ results, query }: LookupProps) {
 export async function getServerSideProps(
   context: GetServerSidePropsContext,
 ): Promise<GetServerSidePropsResult<LookupProps>> {
+  const isGit = context.req.headers.host?.startsWith(`git.`) ?? false;
   const rawId = context.params?.id;
   if (rawId === undefined) {
     return {
@@ -49,7 +50,7 @@ export async function getServerSideProps(
     .with(`string`, () => rawId as string)
     .otherwise(() => (rawId as string[]).join(`/`));
 
-  const results = fuse.search(id);
+  const results = search(id, isGit);
   const firstResult = results[0];
 
   const firstScore = results[0]?.score ?? 1;
@@ -57,11 +58,13 @@ export async function getServerSideProps(
 
   const isGoodEnoughMatch =
     (firstScore < 0.0003 && secondScore - firstScore > 0.0002) ||
-    firstResult.item.path === id;
+    firstResult?.item.path === id;
 
   if (isGoodEnoughMatch) {
     const { item } = firstResult;
-    let url = `https://deno.land/std/${item.path}`;
+    let url = isGit
+      ? `https://github.com/denoland/deno_std/blob/main/${item.path}`
+      : `https://deno.land/std/${item.path}`;
     if (item.lineNumber) url += `#L${item.lineNumber}`;
 
     return {

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { DenoItemType, fuse, SearchItem } from '@/search';
+import { DenoItemType, search, SearchItem } from '@/search';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsFileCode } from 'react-icons/bs';
 import {
@@ -63,7 +63,10 @@ interface ResultProps {
  * @param item an item from the Deno stdlib.
  */
 function goToItem(item: SearchItem) {
-  let url = `https://deno.land/std/${item.path}`;
+  const isGit = window.location.hostname.startsWith(`git.`);
+  let url = isGit
+    ? `https://github.com/denoland/deno_std/blob/main/${item.path}`
+    : `https://deno.land/std/${item.path}`;
   if (item.lineNumber) url += `#L${item.lineNumber}`;
   window.location.href = url;
 }
@@ -155,8 +158,10 @@ export default function Search({
   useEffect(() => {
     if (query === ``) return;
 
-    const newResults = fuse
-      .search(query)
+    const newResults = search(
+      query,
+      window.location.hostname.startsWith(`git.`),
+    )
       .map(({ item }) => item)
       .slice(0, 6);
 
