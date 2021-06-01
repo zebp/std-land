@@ -1,7 +1,9 @@
+import React from 'react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 import { match } from 'ts-pattern';
 import { fuse, SearchResult } from '@/search';
 import Search from '@/components/Search';
+import PopulatedHead from '@/components/PopulatedHead';
 
 import styles from '@/styles/Lookup.module.css';
 
@@ -13,6 +15,8 @@ interface LookupProps {
 export default function Lookup({ results, query }: LookupProps) {
   return (
     <div id={styles.container}>
+      <PopulatedHead />
+
       <h1 id={styles.title}>std.land</h1>
       <Search
         query={query || ``}
