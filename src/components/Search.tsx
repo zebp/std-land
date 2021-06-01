@@ -1,8 +1,16 @@
 import { useCallback, useEffect, useState } from 'react';
-import { fuse, SearchItem } from '@/search';
+import { DenoItemType, fuse, SearchItem } from '@/search';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsFileCode } from 'react-icons/bs';
-import { match } from 'ts-pattern';
+import {
+  VscLink,
+  VscSymbolClass,
+  VscSymbolEnum,
+  VscSymbolMethod,
+} from 'react-icons/vsc';
+import { match, select } from 'ts-pattern';
+import { IconType } from 'react-icons';
+import useHover from 'react-use-hover';
 import styles from './Search.module.css';
 
 interface SearchBoxProps {
@@ -25,11 +33,11 @@ function SearchBox({ value, onChange, sendMessage }: SearchBoxProps) {
             .with(`ArrowUp`, () => `up`)
             .with(`Enter`, () => `go`)
             .with(`Escape`, () => `cancel`)
-            .otherwise(() => undefined) as Message | undefined;
+            .otherwise(() => undefined) as SimpleMessageType;
 
           if (message) {
             e.preventDefault();
-            sendMessage(message);
+            sendMessage({ type: message });
           }
         }}
       />
@@ -40,21 +48,43 @@ function SearchBox({ value, onChange, sendMessage }: SearchBoxProps) {
 interface ResultProps {
   item: SearchItem;
   selected: boolean;
+  index: number;
+  sendMessage: (message: Message) => void;
 }
 
-function Result({ item, selected }: ResultProps) {
-  const onClick = () => {
-    window.location.href = `https://deno.land/std/${item.path}`;
-  };
+function goToItem(item: SearchItem) {
+  let url = `https://deno.land/std/${item.path}`;
+  if (item.lineNumber) url += `#L${item.lineNumber}`;
+  window.location.href = url;
+}
 
+function Result({ item, selected, index, sendMessage }: ResultProps) {
+  const [isHovering, hoveringProps] = useHover();
+  useEffect(() => {
+    if (isHovering) {
+      sendMessage({ type: `select`, index });
+    }
+  }, [isHovering]);
+
+  const darkMode = window.matchMedia(`(prefers-color-scheme: dark)`).matches;
   const classes = selected
     ? `${styles.selected} ${styles.result}`
     : styles.result;
+  const [IconElem, iconColor] = match(item.type)
+    .with(DenoItemType.Class, () => [VscSymbolClass, `#32a852`])
+    .with(DenoItemType.Function, () => [VscSymbolMethod, `#a468bf`])
+    .with(DenoItemType.Enum, () => [VscSymbolEnum, `#2fd5d5`])
+    .with(DenoItemType.TypeAlias, () => [VscLink, `#1e5fb3`])
+    .otherwise(() => [BsFileCode, darkMode ? `#888` : `#323232`]) as [
+    IconType,
+    string,
+  ];
+  const iconStyles = { color: iconColor };
 
   return (
     // eslint-disable-next-line
-    <div className={classes} onClick={onClick}>
-      <BsFileCode className={styles.icon} />
+    <div className={classes} onClick={() => goToItem(item)} {...hoveringProps}>
+      <IconElem style={iconStyles} />
       <span className={styles.name}>{item.name}</span>
       <span className={styles.path}>{item.path}</span>
     </div>
@@ -66,7 +96,8 @@ export interface SearchProps {
   results?: SearchItem[];
 }
 
-type Message = 'up' | 'down' | 'cancel' | 'go';
+type SimpleMessageType = 'up' | 'down' | 'cancel' | 'go';
+type Message = { type: SimpleMessageType } | { type: 'select'; index: number };
 
 export default function Search({
   results: initialResults,
@@ -88,13 +119,13 @@ export default function Search({
       }
 
       match(message)
-        .with(`up`, () => moveSelection(results.length - 1))
-        .with(`down`, () => moveSelection(1))
-        .with(`go`, () => {
-          const item = results[selection ?? 0];
-          window.location.href = `https://deno.land/std/${item.path}`;
-        })
-        .with(`cancel`, () => setSelection(undefined))
+        .with({ type: `up` }, () => moveSelection(results.length - 1))
+        .with({ type: `down` }, () => moveSelection(1))
+        .with({ type: `go` }, () => goToItem(results[selection ?? 0]))
+        .with({ type: `cancel` }, () => setSelection(undefined))
+        .with({ type: `select`, index: select(`index`) }, ({ index }) =>
+          setSelection(index),
+        )
         .run();
     },
     [results, selection, setSelection],
@@ -107,7 +138,7 @@ export default function Search({
     const newResults = fuse
       .search(query)
       .map(({ item }) => item)
-      .slice(0, 4);
+      .slice(0, 6);
 
     setResults(newResults);
 
@@ -126,9 +157,19 @@ export default function Search({
   return (
     <div id={styles.search} style={heightStyles}>
       <SearchBox onChange={setQuery} value={query} sendMessage={process} />
-      {results.map((item, index) => (
-        <Result key={item.path} item={item} selected={index === selection} />
-      ))}
+      {results.map((item, index) => {
+        const key = `${item.path}-${item.name}-${item.type}@${item.lineNumber}`;
+
+        return (
+          <Result
+            key={key}
+            item={item}
+            selected={index === selection}
+            sendMessage={process}
+            index={index}
+          />
+        );
+      })}
     </div>
   );
 }

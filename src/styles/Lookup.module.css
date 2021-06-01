@@ -6,7 +6,7 @@
 }
 
 #title {
-  color: #323232;
+  color: var(--text-color);
   margin: 2rem;
   font-size: 3rem;
 }

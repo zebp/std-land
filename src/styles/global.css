@@ -1,8 +1,26 @@
+html {
+  --background-color: #fafafa;
+  --search-background-color: white;
+  --selected-color: #eee;
+  --text-color: #313131;
+  --path-text-color: #575757;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --background-color: #1c1c1c;
+    --search-background-color: #1a1a1a;
+    --selected-color: #1f1f1f;
+    --text-color: #eee;
+    --path-text-color: #888;
+  }
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #fafafa;
+  background-color: var(--background-color);
 }
 
 a {

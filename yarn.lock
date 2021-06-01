@@ -335,6 +335,15 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
+"@types/react@^16.7.20":
+  version "16.14.8"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.14.8.tgz#4aee3ab004cb98451917c9b7ada3c7d7e52db3fe"
+  integrity sha512-QN0/Qhmx+l4moe7WJuTxNiTsjBwlBGHqKGvInSQCBdo7Qio0VtOqwsC0Wq7q3PbJlB0cR4Y4CVo1OOe6BOsOmA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
 "@types/scheduler@*":
   version "0.16.1"
   resolved "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.1.tgz"
@@ -3472,6 +3481,13 @@ react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+
+react-use-hover@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-use-hover/-/react-use-hover-2.0.0.tgz#3a43f014e832307428dfac1ad6a2b6a170aeb466"
+  integrity sha512-A2OYaC8OnWCD7ZOGbnUX4nJlwr0VEtu1gMnZ5U4w8BoXkwCvBlACgBiUd0Ay+goTqHGq4OSwq4Gxr2x05TQUFA==
+  dependencies:
+    "@types/react" "^16.7.20"
 
 react@17.0.2:
   version "17.0.2"
