@@ -42,12 +42,22 @@ export async function getServerSideProps(
   const results = fuse.search(id);
   const firstResult = results[0];
 
-  // TODO: Make this threshold configurable.
-  if (firstResult?.score ?? 1 < 0.03) {
+  const firstScore = results[0]?.score ?? 1;
+  const secondScore = results[1]?.score ?? 1;
+
+  const isGoodEnoughMatch =
+    (firstScore < 0.0003 && secondScore - firstScore > 0.0002) ||
+    firstResult.item.path === id;
+
+  if (isGoodEnoughMatch) {
+    const { item } = firstResult;
+    let url = `https://deno.land/std/${item.path}`;
+    if (item.lineNumber) url += `#L${item.lineNumber}`;
+
     return {
       redirect: {
         permanent: false,
-        destination: `https://deno.land/std/${firstResult.item.path}`,
+        destination: url,
       },
     };
   }
