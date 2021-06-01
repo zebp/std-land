@@ -66,7 +66,6 @@ function Result({ item, selected, index, sendMessage }: ResultProps) {
     }
   }, [isHovering]);
 
-  const darkMode = window.matchMedia(`(prefers-color-scheme: dark)`).matches;
   const classes = selected
     ? `${styles.selected} ${styles.result}`
     : styles.result;
@@ -75,10 +74,7 @@ function Result({ item, selected, index, sendMessage }: ResultProps) {
     .with(DenoItemType.Function, () => [VscSymbolMethod, `#a468bf`])
     .with(DenoItemType.Enum, () => [VscSymbolEnum, `#2fd5d5`])
     .with(DenoItemType.TypeAlias, () => [VscLink, `#1e5fb3`])
-    .otherwise(() => [BsFileCode, darkMode ? `#888` : `#323232`]) as [
-    IconType,
-    string,
-  ];
+    .otherwise(() => [BsFileCode, `#9f5c8e`]) as [IconType, string];
   const iconStyles = { color: iconColor };
 
   return (
