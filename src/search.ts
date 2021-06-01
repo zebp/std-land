@@ -1,5 +1,5 @@
 import Fuse from 'fuse.js';
-import searchData from '../data.json';
+import searchData from './deno-data.json';
 
 // Eslint bug?
 // eslint-disable-next-line no-shadow
