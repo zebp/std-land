@@ -1,12 +1,23 @@
 #container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 200px;
+  padding-top: 200px;
 }
 
 #title {
   color: var(--text-color);
   margin: 2rem;
   font-size: 3rem;
+}
+
+#footer {
+  color: var(--text-color);
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+#footer > a {
+  color: #4aa3b9;
 }

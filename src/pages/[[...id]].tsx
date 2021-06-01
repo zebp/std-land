@@ -22,6 +22,12 @@ export default function Lookup({ results, query }: LookupProps) {
         query={query || ``}
         results={results.slice(0, 4).map(({ item }) => item)}
       />
+
+      <p id={styles.footer}>
+        Check it out on
+        <a href="https://github.com/zebp/std-land"> Github </a>
+        or <a href="/donate">donate</a> to keep the domain alive.
+      </p>
     </div>
   );
 }
