@@ -25,7 +25,16 @@ export default function Lookup({ results, query }: LookupProps) {
 export async function getServerSideProps(
   context: GetServerSidePropsContext,
 ): Promise<GetServerSidePropsResult<LookupProps>> {
-  const rawId = context.params?.id as string | string[];
+  const rawId = context.params?.id;
+  if (rawId === undefined) {
+    return {
+      props: {
+        query: null,
+        results: [],
+      },
+    };
+  }
+
   const id = match(typeof rawId)
     .with(`string`, () => rawId as string)
     .otherwise(() => (rawId as string[]).join(`/`));
