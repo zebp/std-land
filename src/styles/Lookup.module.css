@@ -21,3 +21,19 @@
 #footer > a {
   color: #4aa3b9;
 }
+
+@media (max-width: 900px) {
+  #container {
+    padding-top: 10vh;
+  }
+
+  #footer {
+    display: none;
+  }
+}
+
+@media (max-height: 400px) {
+  #container {
+    padding-top: 0vh;
+  }
+}
