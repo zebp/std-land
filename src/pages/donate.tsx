@@ -33,12 +33,15 @@ export default function Donate() {
         </Section>
 
         <Section name="How can I donate?">
-          My BTC wallet is
-          <span className={styles.blue}>
+          My BTC address is
+          <a
+            className={styles.blue}
+            href="https://www.blockchain.com/btc/address/bc1qun3qnw4f08dvfm0qeg55wq4n8vsu4fswk5dvcu"
+          >
             {` `}
             bc1qun3qnw4f08dvfm0qeg55wq4n8vsu4fswk5dvcu
             {` `}
-          </span>
+          </a>
           alternatively my Paypal is
           <a className={styles.blue} href="https://paypal.me/zebp">
             {` `}
