@@ -1,5 +1,6 @@
 import React from 'react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
+import Link from 'next/link';
 import { match } from 'ts-pattern';
 import { search, SearchResult } from '@/search';
 import Search from '@/components/Search';
@@ -26,7 +27,7 @@ export default function Lookup({ results, query }: LookupProps) {
       <p id={styles.footer}>
         Check it out on
         <a href="https://github.com/zebp/std-land"> Github </a>
-        or <a href="/donate">donate</a> to keep the domain alive.
+        or <Link href="/donate">donate</Link> to keep the domain alive.
       </p>
     </div>
   );
