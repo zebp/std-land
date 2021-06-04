@@ -11,6 +11,8 @@ import {
 import { match, select } from 'ts-pattern';
 import { IconType } from 'react-icons';
 import useHover from 'react-use-hover';
+import useKeyPress from '@/hooks/useKeyPress';
+
 import styles from './Search.module.css';
 
 interface SearchBoxProps {
@@ -59,21 +61,27 @@ interface ResultProps {
 }
 
 /**
- * Goes to the item's source in the Deno standard library.
+ * Goes to the item's source or documentation for the Deno standard library.
  * @param item an item from the Deno stdlib.
  */
-function goToItem(item: SearchItem) {
+function goToItem(item: SearchItem, visitDocs: boolean) {
   const isGit = window.location.hostname.startsWith(`git.`);
-  let url = isGit
-    ? `https://github.com/denoland/deno_std/blob/main/${item.path}`
-    : `https://deno.land/std/${item.path}`;
-  if (item.lineNumber) url += `#L${item.lineNumber}`;
-  window.location.href = url;
+
+  if (!visitDocs || isGit) {
+    let url = isGit
+      ? `https://github.com/denoland/deno_std/blob/main/${item.path}`
+      : `https://deno.land/std/${item.path}`;
+    if (item.lineNumber) url += `#L${item.lineNumber}`;
+    window.location.href = url;
+  } else {
+    window.location.href = `https://doc.deno.land/https/deno.land/std/${item.path}`;
+  }
 }
 
 /// A component for search results.
 function Result({ item, selected, index, sendMessage }: ResultProps) {
   const [isHovering, hoveringProps] = useHover();
+  const isShiftDown = useKeyPress(`Shift`);
   useEffect(() => {
     if (isHovering) {
       // Sends a message to the search container when we hover over the result to select this item.
@@ -97,7 +105,11 @@ function Result({ item, selected, index, sendMessage }: ResultProps) {
 
   return (
     // eslint-disable-next-line
-    <div className={classes} onClick={() => goToItem(item)} {...hoveringProps}>
+    <div
+      className={classes}
+      onClick={() => goToItem(item, isShiftDown)}
+      {...hoveringProps}
+    >
       <IconElem style={iconStyles} />
       <span className={styles.name}>{item.name}</span>
       <span className={styles.path}>{item.path}</span>
@@ -128,6 +140,7 @@ export default function Search({
   const [query, setQuery] = useState(initialQuery);
   const [results, setResults] = useState(initialResults ?? []);
   const [selection, setSelection] = useState<number | undefined>();
+  const isShiftDown = useKeyPress(`Shift`);
 
   const moveSelection = (offset: number) =>
     setSelection(
@@ -144,14 +157,16 @@ export default function Search({
       match(message)
         .with({ type: `up` }, () => moveSelection(results.length - 1))
         .with({ type: `down` }, () => moveSelection(1))
-        .with({ type: `go` }, () => goToItem(results[selection ?? 0]))
+        .with({ type: `go` }, () =>
+          goToItem(results[selection ?? 0], isShiftDown),
+        )
         .with({ type: `cancel` }, () => setSelection(undefined))
         .with({ type: `select`, index: select(`index`) }, ({ index }) =>
           setSelection(index),
         )
         .run();
     },
-    [results, selection, setSelection],
+    [results, selection, setSelection, isShiftDown],
   );
 
   // Updates our search results whenever we get a new query from the search box.
