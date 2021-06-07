@@ -2,11 +2,22 @@ import React from 'react';
 import { GetServerSidePropsContext, GetServerSidePropsResult } from 'next';
 import Link from 'next/link';
 import { match } from 'ts-pattern';
-import { search, SearchResult } from '@/search';
+import { SearchResult, createSearcher, SearchItem } from '@/search';
 import Search from '@/components/Search';
 import PopulatedHead from '@/components/PopulatedHead';
+import stableData from '@/deno-data.stable.json';
+import gitData from '@/deno-data.git.json';
 
 import styles from '@/styles/Lookup.module.css';
+
+/**
+ * A searcher that has the data of the currently stable Deno standard library.
+ */
+const stableSearcher = createSearcher(stableData as SearchItem[]);
+/**
+ * A searcher that has the data from the main branch of the Deno standard library repository.
+ */
+const gitSearcher = createSearcher(gitData as SearchItem[]);
 
 interface LookupProps {
   query: string | null;
@@ -36,6 +47,10 @@ export default function Lookup({ results, query }: LookupProps) {
 export async function getServerSideProps(
   context: GetServerSidePropsContext,
 ): Promise<GetServerSidePropsResult<LookupProps>> {
+  if (context.req.url?.includes(`/api/docs`) ?? true) {
+    return { notFound: true };
+  }
+
   const isGit = context.req.headers.host?.startsWith(`git.`) ?? false;
   const rawId = context.params?.id;
   if (rawId === undefined) {
@@ -51,7 +66,8 @@ export async function getServerSideProps(
     .with(`string`, () => rawId as string)
     .otherwise(() => (rawId as string[]).join(`/`));
 
-  const results = search(id, isGit);
+  const searcher = isGit ? gitSearcher : stableSearcher;
+  const results = searcher.search(id);
   const firstResult = results[0];
 
   const firstScore = results[0]?.score ?? 1;

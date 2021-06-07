@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { DenoItemType, search, SearchItem } from '@/search';
+import { createSearcher, DenoItemType, SearchItem } from '@/search';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { BsFileCode } from 'react-icons/bs';
 import {
@@ -10,6 +10,7 @@ import {
 } from 'react-icons/vsc';
 import { match, select } from 'ts-pattern';
 import { IconType } from 'react-icons';
+import { FetchDocsResponse } from '@/pages/api/docs/[module]';
 import useHover from 'react-use-hover';
 import useKeyPress from '@/hooks/useKeyPress';
 
@@ -137,6 +138,7 @@ export default function Search({
   results: initialResults,
   query: initialQuery,
 }: SearchProps) {
+  const [searcher, setSearcher] = useState(createSearcher([]));
   const [query, setQuery] = useState(initialQuery);
   const [results, setResults] = useState(initialResults ?? []);
   const [selection, setSelection] = useState<number | undefined>();
@@ -169,14 +171,22 @@ export default function Search({
     [results, selection, setSelection, isShiftDown],
   );
 
+  useEffect(() => {
+    const isGit = window.location.hostname.startsWith(`git.`);
+    fetch(`/api/docs/${isGit ? `git` : `std`}`)
+      .then((res) => res.json())
+      .then((res: FetchDocsResponse) => {
+        const newSearcher = createSearcher(res.data);
+        setSearcher(newSearcher);
+      });
+  }, [setSearcher]);
+
   // Updates our search results whenever we get a new query from the search box.
   useEffect(() => {
     if (query === ``) return;
 
-    const newResults = search(
-      query,
-      window.location.hostname.startsWith(`git.`),
-    )
+    const newResults = searcher
+      .search(query)
       .map(({ item }) => item)
       .slice(0, 6);
 
@@ -187,7 +197,7 @@ export default function Search({
     } else if (selection) {
       setSelection(selection % newResults.length);
     }
-  }, [query]);
+  }, [searcher, query]);
 
   // Hacky fix to get the height animation to work propertly.
   // TODO: Make some of these magic values into constants.
