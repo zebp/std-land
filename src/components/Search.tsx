@@ -176,8 +176,8 @@ export default function Search({
     fetch(`/api/docs/${isGit ? `git` : `std`}`)
       .then((res) => res.json())
       .then((res: FetchDocsResponse) => {
-        const newSearcher = createSearcher(res.data);
-        setSearcher(newSearcher);
+        // const newSearcher = createSearcher(res.data);
+        // setSearcher(newSearcher);
       });
   }, [setSearcher]);
 
